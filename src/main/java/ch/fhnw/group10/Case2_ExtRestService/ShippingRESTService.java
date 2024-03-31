@@ -1,3 +1,5 @@
+package ch.fhnw.group10.Case2_ExtRestService;
+
 import org.camunda.bpm.client.ExternalTaskClient;
 
 import jakarta.ws.rs.WebApplicationException;
@@ -59,7 +61,7 @@ public class ShippingRESTService {
 						.post(Entity.entity(nc, MediaType.APPLICATION_JSON), Consignment.class);
 
 				//Print the response
-				System.out.println("\nConsignment successfully ordered!");
+				System.out.println("\nch.fhnw.group10.Case2_ExtRestService.Consignment successfully ordered!");
 				System.out.println("Shipping Order ID: " + response.getOrderId());
 				System.out.println("Pickup Date      : " + response.getPickupdate());
 				System.out.println("Delivery Date    : " + response.getDeliverydate());

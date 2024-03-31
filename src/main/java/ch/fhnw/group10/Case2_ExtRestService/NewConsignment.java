@@ -1,3 +1,5 @@
+package ch.fhnw.group10.Case2_ExtRestService;
+
 public class NewConsignment {
 
     private String destination;
