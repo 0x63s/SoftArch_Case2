@@ -2,17 +2,37 @@ package ch.fhnw.group10.Case2_ExtRestService;
 
 public class NewConsignment {
 
-    private String destination;
+    private String deliveryAddress;
     private String customerReference;
     private String recepientPhone;
     private Integer weight;
 
-    public String getDestination() {
-        return destination;
+    private Country countryCode;
+    private ShippingMethod shippingMethod;
+
+    public enum Country{
+        CH,
+        DE,
+        AR,
+        RU,
+        JP,
+        OTHER
     }
 
-    public void setDestination(String destination) {
-        this.destination = destination;
+    public enum ShippingMethod{
+        STANDARD,
+        SPECIAL,
+        AIR,
+        MANUAL_CHECK
+    }
+
+
+    public String getDeliveryAddress() {
+        return deliveryAddress;
+    }
+
+    public void setDeliveryAddress(String destination) {
+        this.deliveryAddress = deliveryAddress;
     }
 
     public String getCustomerReference() {
@@ -39,4 +59,20 @@ public class NewConsignment {
         this.weight = weight;
     }
 
+    public Country getCountryCode() {
+        return countryCode;
+    }
+
+    public void setCountryCode(Country countryCode) {
+        this.countryCode = countryCode;
+    }
+
+
+    public void setShippingMethod(ShippingMethod method) {
+        shippingMethod = method;
+    }
+
+    public ShippingMethod getShippingMethod() {
+        return shippingMethod;
+    }
 }

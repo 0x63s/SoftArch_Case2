@@ -3,12 +3,30 @@ package ch.fhnw.group10.Case2_ExtRestService;
 public class Consignment {
 
     private String orderId;
-    private Integer weight;
+    private int weight;
     private String pickupdate;
     private String deliverydate;
     private String customerRefernce;
     private String recepientPhone;
-    private String destination;
+    private Country destination;
+
+    private ShippingMethod shippingMethod;
+    public enum Country{
+        CH,
+        DE,
+        AR,
+        RU,
+        JP,
+        OTHER
+    }
+
+    public enum ShippingMethod{
+        STANDARD,
+        SPECIAL,
+        AIR,
+        MANUAL_CHECK
+    }
+
 
     public String getOrderId() {
         return orderId;
@@ -18,7 +36,7 @@ public class Consignment {
         this.orderId = orderId;
     }
 
-    public Integer getWeight() {
+    public int getWeight() {
         return weight;
     }
 
@@ -33,6 +51,7 @@ public class Consignment {
     public void setPickupdate(String pickupdate) {
         this.pickupdate = pickupdate;
     }
+
 
     public String getDeliverydate() {
         return deliverydate;
@@ -58,12 +77,23 @@ public class Consignment {
         this.recepientPhone = recepientPhone;
     }
 
-    public String getDestination() {
+
+
+    public Country getDestination() {
         return destination;
     }
 
-    public void setDestination(String destination) {
+    public void setDestination(Country destination) {
         this.destination = destination;
+    }
+
+
+    public void setShippingMethod(ShippingMethod method) {
+        shippingMethod = method;
+    }
+
+    public ShippingMethod getShippingMethod() {
+        return shippingMethod;
     }
 
 }

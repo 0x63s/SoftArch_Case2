@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SoftArch_Case2" />
+        <module name="Group10_Case2_ExtRestService" />
         <module name="ExtRestService_Group10" />
       </profile>
     </annotationProcessing>
